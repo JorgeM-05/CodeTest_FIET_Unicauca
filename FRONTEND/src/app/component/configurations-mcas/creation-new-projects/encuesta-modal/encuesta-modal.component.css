@@ -1,0 +1,11 @@
+.mat-radio-button ~ .mat-radio-button {
+    margin-left: 26px;
+  }
+
+a {
+  color: black;
+}
+
+a:hover {
+  cursor: pointer;
+}

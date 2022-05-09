@@ -1,0 +1,340 @@
+<section class="shadow-lg row container-fluid  my-4">
+
+    <form class="row g-3 " [formGroup]="request">
+        <div class="col-lg-6 mb-3 my-2 row">
+            <!-- Name -->
+            <div class="row">
+                <div class="mb-3 col-lg-12 ">
+                    <input [class.is-valid]="isNameFieldValid" [class.is-invalid]="isNameFieldInvalid" type="text"
+                        class="form-control" formControlName="nameClass" id="exampleFormControlInput1"
+                        placeholder="name class:">
+                </div>
+                <div class="mb-3 col-lg-12">
+                    <input [class.is-valid]="isNameFieldValid" [class.is-invalid]="isNameFieldInvalid" type="text"
+                        class="form-control" formControlName="name" id="exampleFormControlInput1"
+                        placeholder="name method:">
+                </div>
+
+                <!-- <div class=" my-1 col-lg-4">
+                    <div class="form-check form-switch my-0">
+                        <label class="form-check-label" for="flexSwitchCheckDefault">Static</label>
+                        <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault"
+                            formControlName="static">
+                    </div>
+                </div> -->
+            </div>
+
+            <!-- Return -->
+            <div class="row">
+                <div class="col-lg-6 mb-2">
+                    <div class="form-floating">
+                        <select [class.is-valid]="isReturnFieldValid" [class.is-invalid]="isReturnFieldInvalid"
+                            class="form-select" id="floatingSelect" formControlName="return"
+                            aria-label="Floating label select example">
+                            <option value="1">int</option>
+                            <option value="2">double</option>
+                            <option value="3">String</option>
+                            <option value="4">long</option>
+                        </select>
+                        <label for="floatingSelectReturn">Type Return</label>
+                    </div>
+
+                </div>
+
+                <!-- strength -->
+                <!-- <div class="col-lg-6 mb-2 ">
+                    <input type="number " class="form-control " id="exampleFormControlInput1" formControlName="strength" placeholder="Interactions number : " id="validationCustom03 " (change)="cambio()">
+                </div> -->
+                <div class="col-lg-6 mb-2">
+                    <div class="form-floating">
+                        <select [class.is-valid]="isInteractionFieldValid"
+                            [class.is-invalid]="isInteractionFieldInvalid" class="form-select" id="floatingSelect"
+                            formControlName="strength" aria-label="Floating label select example"
+                            formControlName="strength">
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                        </select>
+                        <label for="floatingSelectStrength">Select interaction</label>
+                    </div>
+                </div>
+            </div>
+
+            <!-- PARAMETROS -->
+            <div class="card shadow rounded  mx-1 col-md-11">
+                <div class="card-body row">
+                    <h5 class="card-title">Parameters</h5>
+
+
+                    <!-- Form para varibles  -->
+                    <form [formGroup]="request_var">
+                        <div>
+                            <div class="row col-md-12">
+                                <div class="col-sm-4 col-md-6">
+                                    <label for="exampleFormControlInput1" class="form-label">Name
+                                        variable:</label>
+                                    <input [class.is-valid]="isVarFieldValid" [class.is-invalid]="isVarFieldInvalid"
+                                        type="text" class="form-control" formControlName="name_var" required>
+                                </div>
+
+                                <div class="col-sm-4  col-md-5 mb-0 ">
+                                    <label for="exampleFormControlInput1" class="form-label">Type:</label>
+                                    <select [class.is-valid]="isTypeFieldValid" [class.is-invalid]="isTypeFieldInvalid"
+                                        class="form-select" aria-label="Default select example"
+                                        formControlName="type_var">
+                                        <option value="1">Int</option>
+                                        <option value="2">double</option>
+                                        <option value="3">long</option>
+                                        <option value="4">String</option>
+                                    </select>
+                                </div>
+                                <div class="col-sm-4 col-md-1 my-4">
+                                    <button class="btn btn-outline-success my-2" (click)="addparameters()">
+                                        <i class="fas fa-plus-circle"></i></button>
+                                </div>
+                            </div>
+
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-6 mb-3 my-2 ">
+            <!-- tabla -->
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th scope="col">Variable</th>
+                        <th scope="col">Type</th>
+                        <th scope="col">value</th>
+                        <th scope="col">add</th>
+                        <th scope="col">Remove</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <p *ngIf="arrayejemplo.length > 0">
+                    </p>
+                    <tr *ngFor="let arrayParams of arrayejemplo; let i = index ">
+                        <td>
+                            {{arrayParams[0]}}
+                        </td>
+                        <td [ngSwitch]="arrayParams[1]">
+                            <p *ngSwitchCase=1>
+                                int
+                            </p>
+                            <p *ngSwitchCase=2>
+                                double
+                            </p>
+                            <p *ngSwitchCase=3>
+                                long
+                            </p>
+                            <p *ngSwitchCase=4>
+                                string
+                            </p>
+                        </td>
+                        <td>
+                            {{arrayParams[2]}}
+                        </td>
+                        <td>
+                            <button class="btn btn-outline-success" (click)="indice(i)" data-bs-toggle="modal"
+                                data-bs-target="#generateParameters"><i class="fas fa-plus-circle "></i></button>
+                        </td>
+                        <!-- <td>
+                            <button class="btn btn-outline-success " name="editar" (click)="editar(i)"
+                                data-bs-toggle="modal" data-bs-target="#generateParameters">
+                                <i class="fas fa-plus-circle "></i>
+                            </button>
+                        </td> -->
+                        <td>
+                            <button class="btn btn-outline-danger " name="eliminar" (click)="eliminar(i)">
+                                <i class="fas fa-trash-alt "></i>
+                            </button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- boton generar test -->
+        <div class="row ">
+            <div class="col-md-5 "></div>
+            <div class="col-md-4">
+                <div class="d-flex align-items-center justify-content-between mt-4 mb-0 ">
+                    <input type="submit" class="btn btn-primary mb-2" (click)="requestServices()"
+                        generateTestvalue="generate tests" value="Generate test">
+                </div>
+            </div>
+        </div>
+    </form>
+    <div class="form-row" *ngIf="showMsg">
+        <div class="alert alert-{{type}} col-md-12 " role="alert">
+            {{msg}}
+            <div>
+                <a>{{response}}</a>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<div *ngIf="loading" class="text-center">
+    <span>Generating Test...</span><br>
+    <div class="spinner-border" role="status">
+        <span class="visually-hidden">Loading...</span>
+    </div>
+</div>
+
+
+<div class="modal fade" id="generateParameters" tabindex="-1" aria-labelledby="generateParameters" aria-hidden="true"
+    data-bs-backdrop="static" data-bs-keyboard="false">
+    <div class="modal-dialog modal-md ">
+        <div class="modal-content ">
+            <div class="col-lg-12 ">
+                <div class="card shadow-lg border-0 rounded-lg mt-5 ">
+                    <!-- titulo -->
+                    <div class="card-header ">
+                        <h3 class="text-center font-weight-light my-0 ">Parameters</h3>
+                    </div>
+                    <div class="card-body modal-dialog-scrollable row">
+                        <div class="col-md-8">
+                            <h6 *ngIf="arrayejemplo.length > 0">Variable: {{arrayejemplo[ctn][0]}} </h6>
+                        </div>
+
+
+                        <form [formGroup]="request_value">
+                            <div class="row">
+                                <div class="mb-1 col-lg-7">
+                                    <label for="exampleFormControlInput1" class="form-label">Value:</label>
+                                    <input type="text" class="form-control" formControlName="value" required>
+                                </div>
+                                <div class="col-lg-2">
+                                    <label for="exampleFormControlInput1" class="form-label">Add</label>
+                                    <button class="btn btn-outline-success" (click)="addvalue()"><i
+                                            class="fas fa-plus-circle"></i></button>
+                                </div>
+                            </div>
+                        </form>
+
+                        <div *ngIf="arrayValue.length> 0" class="row">
+                            <div class="col-lg-3" *ngFor="let arrayParams of arrayValue; let i = index ">
+                                {{arrayParams}}
+                                <button class="btn btn-outline-danger " (click)="eliminarElemento(i)"><i
+                                        class="fas fa-trash-alt "></i></button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="modal-footer">
+                        <button type="button " class="btn btn-outline-secondary" data-bs-dismiss="modal">Close</button>
+                        <button type="button " class="btn btn-outline-success" (click)="save()"
+                            data-bs-dismiss="modal"><i class=" fas fa-save "></i> Save</button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<section class="shadow-lg row container-fluid  my-4">
+    <div class="row">
+        <div class="col-12">
+            <div class="row">
+                <!-- llenar parametros de salida -->
+                <div class=" row" *ngIf="displayVar">
+                    <div class="col-md-10 mb-3 my-2 ">
+                        <!-- tabla -->
+
+                        <form class="" [formGroup]="form_req_expect">
+                            <div class="row" formArrayName="Expected">
+                                <div class="col-md-5">
+                                    <table class="table ">
+                                        <thead>
+                                            <tr>
+                                                <th scope="col">Variables</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+
+                                            <tr *ngFor="let vard of Variable; let i = index;" class="my-5">
+                                                <td>
+                                                    {{vard}}
+                                                </td>
+
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+
+                                <div class="col-md-5">
+                                    <table class="">
+                                        <thead>
+                                            <tr>
+                                                <th scope="col">Expected value</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody class="">
+
+                                            <tr *ngFor="let Expected of Expected.controls; index as idx;">
+                                                <td>
+                                                    <input type="text" class="form-control  my-1"
+                                                        [formControlName]="idx" required>
+                                                    <!-- <input [formControlName]="idx" placeholder="Enter a Name"> -->
+                                                </td>
+                                            </tr>
+
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </form>
+
+                    </div>
+                    <div class="col-md-2 my-2">
+                        <a type="submit" class="btn btn-primary mb-2 " (click)="generateCode()"
+                            generateTestvalue="generate tests">Generate Code</a>
+                    </div>
+                </div>
+
+
+                <!-- muestre el codigo -->
+                <div class="col-10 row my-2" *ngIf="displayCodes">
+                    <div class="col-md-3">
+                        <input type="submit" class="btn btn-primary mb-2" (click)="botonCambioLenguaje()"
+                            generateTestvalue="generate tests" value="{{displaycode?'Ver en C#':'Ver en Java'}}">
+                    </div>
+                    <div class="col-md-2"></div>
+                    <div class="col-md-3">
+                        <a type="submit" class="btn btn-primary mb-2 " generateTestvalue="generate tests"
+                            (click)="editVarOut()">Editar Variables Out</a>
+                    </div>
+                    <div class="col-md-2"></div>
+                    <div class="col-md-1">
+                        <input type="submit" class="btn btn-success mb-2" (click)="modalPoll()"
+                            generateTestvalue="generate tests" value="Guardar Test">
+                    </div>
+
+                    <div class="col-md-4">
+
+                    </div>
+                    <!-- <div class="" *ngIf="displaycode">
+                        <pre>
+                            <code [highlight]="codech" [lineNumbers]="true" (highlighted)="currentTheme"></code>
+                        </pre>
+
+                    </div> -->
+                    <div class="" *ngIf="!displaycode">
+                        <pre>
+                            <code [highlight]="codejava"[lineNumbers]="true" (highlighted)="currentTheme"></code>
+                        </pre>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,12 @@
+[
+    { "filas": 7, "columnas": 1, "fuerza": 1, "alfabeto": 1 },
+    { "filas": 8, "columnas": 2, "fuerza": 2, "alfabeto": 1 },
+    { "filas": 4, "columnas": 3, "fuerza": 3, "alfabeto": 1 },
+    { "filas": 10, "columnas": 4, "fuerza": 4, "alfabeto": 1 },
+    { "filas": 8, "columnas": 5, "fuerza": 5, "alfabeto": 1 },
+    { "filas": 4, "columnas": 6, "fuerza": 6, "alfabeto": 1 },
+    { "filas": 9, "columnas": 7, "fuerza": 7, "alfabeto": 1 },
+    { "filas": 2, "columnas": 8, "fuerza": 8, "alfabeto": 1 },
+    { "filas": 5, "columnas": 9, "fuerza": 9, "alfabeto": 0 }
+]
+

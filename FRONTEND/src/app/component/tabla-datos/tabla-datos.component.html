@@ -1,0 +1,77 @@
+<input type="submit" class="btn btn-primary mb-2" (click)="botonCambioLenguaje()" generateTestvalue="generate tests" value="{{displaycode?'Ver en Java':'Ver en C#'}}">
+<div class="row">
+
+<div class="col-12">
+    <div class="row"><div class="col-12 taabla">Metodo-Prueba</div></div>
+    <div class="row">
+        <div class="col-6 taabla">
+            Variables   Alfabeto  <br>
+            int dia     2,5,6 <br>
+            String Mes  Junio, Julio <br>
+            String mome  Mañana, Tarde,Noche
+        </div>
+        <div class="col-6 taabla">
+-
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-7 taabla">
+            <table class="table table-hover">
+                <tbody>
+
+                    <tr *ngFor="let itemProject of CaNotesArray ; let i = index">
+                        <td>{{itemProject.nombre}}</td>
+                        <td>{{itemProject.company}}</td>
+                        <td>{{itemProject.fecha}} </td>
+                        <td>
+                           <input type="text">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Junio</td>
+                        <td>12</td>
+                        <td>Montaña</td>
+                        <td>
+                           <input type="text">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Julio</td>
+                        <td>13</td>
+                        <td>Montaña</td>
+                        <td>
+                           <input type="text">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Agosto</td>
+                        <td>20</td>
+                        <td>Montaña</td>
+                        <td>
+                           <input type="text">
+                        </td>
+                    </tr>
+                </tbody>
+                <br>
+                <button>Agregar </button>
+            </table>
+        </div>
+        <div class="col-5 taabla">
+
+            <div class="" *ngIf="displaycode">
+                <pre>
+                    <code [highlight]="codech" [lineNumbers]="true" (highlighted)="currentTheme"></code>
+                </pre>
+                
+            </div>
+            <div class="" *ngIf="!displaycode">
+                <pre>
+                    <code [highlight]="codejava"></code>
+                </pre>
+                
+            </div>
+        
+        </div>
+    </div>
+</div>
+</div>

@@ -1,0 +1,55 @@
+<div class="row ">
+    <div class="col-md-8 my-3">
+        <h5 class="breadcrumb">Projects</h5>
+    </div>
+    <div class="col-md-4 my-3">
+        <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="CreateProject.html">Projects</a></li>
+                <li class="breadcrumb-item active" aria-current="page">List</li>
+            </ol>
+        </nav>
+    </div>
+</div>
+<div class="shadow-lg row container-fluid" data-bs-dismiss="modal">
+    <div class="">
+        <div class="col-md-10 my-2">
+            <a type="button" [routerLink]="['/new-Projects']" class="shadow btn btn-outline-secondary mb-4">+ Add project</a>
+        </div>
+    </div>
+
+    <div class="card mb-4 col-md-12">
+
+        <div class="card-body">
+            <table class="table table-hover">
+                <thead>
+                    <tr>
+                        <th scope="col">
+                            <input class="form-check-input" type="checkbox" value="" id="flexCheckIndeterminate">
+                        </th>
+                        <th scope="col">Name Project</th>
+                        <th scope="col">Company</th>
+                        <th scope="col">Date</th>
+                        <th scope="col">Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+
+                    <tr *ngFor="let itemProject of ProjectsSchemaArray">
+                        <th scope="row"><input class="form-check-input" type="checkbox" value="" id="flexCheckIndeterminate"></th>
+                        <td>{{itemProject.nombre}}</td>
+                        <td>{{itemProject.company}}</td>
+                        <td>{{itemProject.fecha}} </td>
+                        <td>
+                            <button class="shadow btn btn-outline-secondary mb-4" (click)="EditarButton(itemProject._idList)" >Editar</button>
+                            <button class="shadow btn btn-outline-secondary mb-4" (click)="eliminarProyecto(itemProject._idList)">Eliminar</button>
+                            <button class="shadow btn btn-outline-secondary mb-4">Ver</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+    </div>
+
+</div>

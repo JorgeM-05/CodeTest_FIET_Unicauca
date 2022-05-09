@@ -1,0 +1,300 @@
+ 
+<a class="float-end text-black" (click)="onClickNo()">
+    <span class="material-icons"> close </span>
+</a>
+
+<div class="mb-4 text-center">
+    <h3>Encuesta de satisfacción</h3>
+</div>
+
+
+<div mat-dialog-content>
+    <form [formGroup]="myForm" autocomplete="off">
+        
+        <div class="px-5 mb-1">
+            <h5><strong>1.</strong> ¿Cuál es su grado de satisfacción con la interacción del mapa presentado en la aplicación?</h5>
+            <div class="p-5">
+
+                <mat-radio-group formControlName="question_1_1" class="row mb-3" aria-label="Select an option">
+                    <div class="col-lg-6">
+                        <h6 class="">Fluidez de la interfaz:</h6>
+                    </div>
+                    <div class="col-lg-6">
+                        <mat-radio-button value="1">1</mat-radio-button>
+                        <mat-radio-button value="2">2</mat-radio-button>
+                        <mat-radio-button value="3">3</mat-radio-button>
+                        <mat-radio-button value="4">4</mat-radio-button>
+                        <mat-radio-button value="5">5</mat-radio-button>
+                    </div>
+                </mat-radio-group>
+
+                <mat-radio-group formControlName="question_1_2" class="row mb-3" aria-label="Select an option">
+                    <div class="col-lg-6">
+                        <h6 class="me-4">Facilidad de aprendizaje para usar esta funcionalidad:</h6>
+                    </div>
+                    <div class="col-lg-6">
+                        <mat-radio-button value="1">1</mat-radio-button>
+                        <mat-radio-button value="2">2</mat-radio-button>
+                        <mat-radio-button value="3">3</mat-radio-button>
+                        <mat-radio-button value="4">4</mat-radio-button>
+                        <mat-radio-button value="5">5</mat-radio-button>
+                    </div>
+                </mat-radio-group>
+
+                <mat-radio-group formControlName="question_1_3" class="row mb-3" aria-label="Select an option">
+                    <div class="col-lg-6">
+                        <h6 class="me-4">Interfaz amigable al usuario:</h6>
+                    </div>
+                    <div class="col-lg-6">
+                        <mat-radio-button value="1">1</mat-radio-button>
+                        <mat-radio-button value="2">2</mat-radio-button>
+                        <mat-radio-button value="3">3</mat-radio-button>
+                        <mat-radio-button value="4">4</mat-radio-button>
+                        <mat-radio-button value="5">5</mat-radio-button>
+                    </div>
+                </mat-radio-group>
+
+                <mat-radio-group formControlName="question_1_4" class="row" aria-label="Select an option">
+                    <div class="col-lg-6">
+                        <h6 class="me-4">La funcionalidad resulta útil para el usuar:</h6>
+                    </div>
+                    <div class="col-lg-6">
+                        <mat-radio-button value="1">1</mat-radio-button>
+                        <mat-radio-button value="2">2</mat-radio-button>
+                        <mat-radio-button value="3">3</mat-radio-button>
+                        <mat-radio-button value="4">4</mat-radio-button>
+                        <mat-radio-button value="5">5</mat-radio-button>
+                    </div>
+                </mat-radio-group>
+            </div>
+        </div>
+
+        <div class="px-5 mb-3">
+            <h5><strong>2.</strong> ¿Cuál es su grado de satisfacción con la obtención y la presentación de la información inmobiliaria?</h5>
+            <div class="p-5">
+
+                <mat-radio-group formControlName="question_2_1" class="row mb-3" aria-label="Select an option">
+                    <div class="col-lg-6">
+                        <h6 class="">Fluidez de la interfaz:</h6>
+                    </div>
+                    <div class="col-lg-6">
+                        <mat-radio-button value="1">1</mat-radio-button>
+                        <mat-radio-button value="2">2</mat-radio-button>
+                        <mat-radio-button value="3">3</mat-radio-button>
+                        <mat-radio-button value="4">4</mat-radio-button>
+                        <mat-radio-button value="5">5</mat-radio-button>
+                    </div>
+                </mat-radio-group>
+
+                <mat-radio-group formControlName="question_2_2" class="row mb-3" aria-label="Select an option">
+                    <div class="col-lg-6">
+                        <h6 class="me-4">Facilidad de aprendizaje para usar esta funcionalidad:</h6>
+                    </div>
+                    <div class="col-lg-6">
+                        <mat-radio-button value="1">1</mat-radio-button>
+                        <mat-radio-button value="2">2</mat-radio-button>
+                        <mat-radio-button value="3">3</mat-radio-button>
+                        <mat-radio-button value="4">4</mat-radio-button>
+                        <mat-radio-button value="5">5</mat-radio-button>
+                    </div>
+                </mat-radio-group>
+
+                <mat-radio-group formControlName="question_2_3" class="row mb-3" aria-label="Select an option">
+                    <div class="col-lg-6">
+                        <h6 class="me-4">Interfaz amigable al usuario:</h6>
+                    </div>
+                    <div class="col-lg-6">
+                        <mat-radio-button value="1">1</mat-radio-button>
+                        <mat-radio-button value="2">2</mat-radio-button>
+                        <mat-radio-button value="3">3</mat-radio-button>
+                        <mat-radio-button value="4">4</mat-radio-button>
+                        <mat-radio-button value="5">5</mat-radio-button>
+                    </div>
+                </mat-radio-group>
+
+                <mat-radio-group formControlName="question_2_4" class="row mb-3" aria-label="Select an option">
+                    <div class="col-lg-6">
+                        <h6 class="me-4">La funcionalidad resulta útil para el usuario:</h6>
+                    </div>
+                    <div class="col-lg-6">
+                        <mat-radio-button value="1">1</mat-radio-button>
+                        <mat-radio-button value="2">2</mat-radio-button>
+                        <mat-radio-button value="3">3</mat-radio-button>
+                        <mat-radio-button value="4">4</mat-radio-button>
+                        <mat-radio-button value="5">5</mat-radio-button>
+                    </div>
+                </mat-radio-group>
+            </div>
+        </div>        
+
+        <div class="px-5 mb-3">
+            <h5><strong>3.</strong> ¿Cuál es su grado de satisfacción con el apartado de configuración del scraper?</h5>
+            <div class="p-5">
+
+                <mat-radio-group formControlName="question_3_1" class="row mb-3" aria-label="Select an option">
+                    <div class="col-lg-6">
+                        <h6 class="">Fluidez de la interfaz:</h6>
+                    </div>
+                    <div class="col-lg-6">
+                        <mat-radio-button value="1">1</mat-radio-button>
+                        <mat-radio-button value="2">2</mat-radio-button>
+                        <mat-radio-button value="3">3</mat-radio-button>
+                        <mat-radio-button value="4">4</mat-radio-button>
+                        <mat-radio-button value="5">5</mat-radio-button>
+                    </div>
+                </mat-radio-group>
+
+                <mat-radio-group formControlName="question_3_2" class="row mb-3" aria-label="Select an option">
+                    <div class="col-lg-6">
+                        <h6 class="me-4">Facilidad de aprendizaje para usar esta funcionalidad:</h6>
+                    </div>
+                    <div class="col-lg-6">
+                        <mat-radio-button value="1">1</mat-radio-button>
+                        <mat-radio-button value="2">2</mat-radio-button>
+                        <mat-radio-button value="3">3</mat-radio-button>
+                        <mat-radio-button value="4">4</mat-radio-button>
+                        <mat-radio-button value="5">5</mat-radio-button>
+                    </div>
+                </mat-radio-group>
+
+                <mat-radio-group formControlName="question_3_3" class="row mb-3" aria-label="Select an option">
+                    <div class="col-lg-6">
+                        <h6 class="me-4">Interfaz amigable al usuario:</h6>
+                    </div>
+                    <div class="col-lg-6">
+                        <mat-radio-button value="1">1</mat-radio-button>
+                        <mat-radio-button value="2">2</mat-radio-button>
+                        <mat-radio-button value="3">3</mat-radio-button>
+                        <mat-radio-button value="4">4</mat-radio-button>
+                        <mat-radio-button value="5">5</mat-radio-button>
+                    </div>
+                </mat-radio-group>
+
+                
+                <mat-radio-group formControlName="question_3_4" class="row mb-3" aria-label="Select an option">
+                        <div class="col-lg-6">
+                            <h6 class="me-4">La funcionalidad resulta útil para el usuario:</h6>
+                        </div>
+                        <div class="col-lg-6">
+                            <mat-radio-button value="1">1</mat-radio-button>
+                            <mat-radio-button value="2">2</mat-radio-button>
+                            <mat-radio-button value="3">3</mat-radio-button>
+                            <mat-radio-button value="4">4</mat-radio-button>
+                            <mat-radio-button value="5">5</mat-radio-button>
+                        </div>
+                </mat-radio-group>
+            </div>            
+        </div>
+
+        <div class="px-5 mb-3">
+            <mat-radio-group formControlName="question_4">
+                <div>
+                    <h5><strong>4.</strong> ¿Cuál es su grado de satisfacción general con Property Information extractor (PiExtractor)?</h5>
+                </div>
+                <div class="p-5">
+                    <mat-radio-button value="1">1</mat-radio-button>
+                    <mat-radio-button value="2">2</mat-radio-button>
+                    <mat-radio-button value="3">3</mat-radio-button>
+                    <mat-radio-button value="4">4</mat-radio-button>
+                    <mat-radio-button value="5">5</mat-radio-button>
+                </div>
+            </mat-radio-group>
+        </div>
+
+        <div class="px-5 mb-3">
+            <mat-radio-group formControlName="question_5">
+                <div>
+                    <h5><strong>5.</strong> ¿Recomendaría usted Piextractor a otras personas del sector inmobiliario?</h5>
+                </div>
+                <div class="p-5">
+                    <mat-radio-button value="1">1</mat-radio-button>
+                    <mat-radio-button value="2">2</mat-radio-button>
+                    <mat-radio-button value="3">3</mat-radio-button>
+                    <mat-radio-button value="4">4</mat-radio-button>
+                    <mat-radio-button value="5">5</mat-radio-button>
+                </div>
+            </mat-radio-group>
+        </div>
+
+        <div class="px-5 mb-3">
+            <mat-radio-group formControlName="question_6">
+                <div>
+                    <h5><strong>6.</strong> ¿En comparación con otras alternativas de Piextractor, piextractor es ...?</h5>
+                </div>
+                <div class="p-5">
+                    <mat-radio-button value="1">1</mat-radio-button>
+                    <mat-radio-button value="2">2</mat-radio-button>
+                    <mat-radio-button value="3">3</mat-radio-button>
+                    <mat-radio-button value="4">4</mat-radio-button>
+                    <mat-radio-button value="5">5</mat-radio-button>
+                </div>
+            </mat-radio-group>
+        </div>
+
+        <div class="px-5 mb-3">
+            <mat-radio-group formControlName="question_7">
+                <div>
+                    <h5><strong>7.</strong> ¿Utilizaría usted Piextractor de nuevo?</h5>
+                </div>
+                <div class="p-5">
+                    <mat-radio-button value="1">1</mat-radio-button>
+                    <mat-radio-button value="2">2</mat-radio-button>
+                    <mat-radio-button value="3">3</mat-radio-button>
+                    <mat-radio-button value="4">4</mat-radio-button>
+                    <mat-radio-button value="5">5</mat-radio-button>
+                </div>
+            </mat-radio-group>
+        </div>
+
+        <div class="px-5 mb-3">
+            <mat-radio-group formControlName="question_8">
+                <div>
+                    <h5><strong>8.</strong> ¿No he tenido ningún inconveniente a la hora de usar Piextrator?</h5>
+                </div>
+                <div class="p-5">
+                    <mat-radio-button value="1">1</mat-radio-button>
+                    <mat-radio-button value="2">2</mat-radio-button>
+                    <mat-radio-button value="3">3</mat-radio-button>
+                    <mat-radio-button value="4">4</mat-radio-button>
+                    <mat-radio-button value="5">5</mat-radio-button>
+                </div>
+            </mat-radio-group>
+        </div>
+
+        <div class="px-5 mb-3">
+            <mat-radio-group formControlName="question_9">
+                <div>
+                    <h5><strong>9.</strong> Piextrator cubre mis necesidades.</h5>
+                </div>
+                <div class="p-5">
+                    <mat-radio-button value="1">1</mat-radio-button>
+                    <mat-radio-button value="2">2</mat-radio-button>
+                    <mat-radio-button value="3">3</mat-radio-button>
+                    <mat-radio-button value="4">4</mat-radio-button>
+                    <mat-radio-button value="5">5</mat-radio-button>
+                </div>
+            </mat-radio-group>
+        </div>
+
+        <div class="px-5 mb-3">
+            <mat-radio-group formControlName="question_10">
+                <div>
+                    <h5><strong>10.</strong> Piextrator es fácil de usar.</h5>
+                </div>
+                <div class="p-5">
+                    <mat-radio-button value="1">1</mat-radio-button>
+                    <mat-radio-button value="2">2</mat-radio-button>
+                    <mat-radio-button value="3">3</mat-radio-button>
+                    <mat-radio-button value="4">4</mat-radio-button>
+                    <mat-radio-button value="5">5</mat-radio-button>
+                </div>
+            </mat-radio-group>
+        </div>
+
+        
+        <div mat-dialog-actions class="row justify-content-center">
+            <button class="col-lg-3 offset-3 mx-2 btn btn-danger" mat-button (click)="onClickNo()">Cancelar</button>
+            <button class="col-lg-3 btn btn-primary" mat-button (click)="savePoll()" [mat-dialog-close]="true">Enviar</button>
+        </div>
+    </form>
+</div> 

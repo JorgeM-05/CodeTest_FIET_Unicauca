@@ -1,0 +1,11 @@
+.taabla{
+    border: 1px solid #000000;
+}
+
+input.is-valid {
+    border: 2px solid green;
+}
+
+input.is-invalid {
+    border: 2px solid red;
+}
